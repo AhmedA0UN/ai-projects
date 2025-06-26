@@ -172,4 +172,32 @@ while True:
     elif 'open instagram' in query:
         speak("Opening Instagram")
         webbrowser.open("https://instagram.com")
+    # open linkedin
+    elif 'open linkedin' in query:
+        speak("Opening LinkedIn")
+        webbrowser.open("https://linkedin.com")
+    elif 'open pinterest' in query:
+        speak("Opening Pinterest")
+        webbrowser.open("https://pinterest.com")
+    elif 'open reddit' in query:
+        speak("Opening Reddit")
+        webbrowser.open("https://reddit.com")
+    elif 'open tumblr' in query:
+        speak("Opening Tumblr")
+        webbrowser.open("https://tumblr.com")
+    elif 'open quora' in query:
+        speak("Opening Quora")
+        webbrowser.open("https://quora.com")
+    elif 'open stack overflow' in query:
+        speak("Opening Stack Overflow")
+        webbrowser.open("https://stackoverflow.com")
+    # fermer les tabs google
+    elif 'close google tabs' in query:
+        speak("Closing all Google tabs")
+        try:
+            import os
+            os.system("taskkill /im chrome.exe /f")  # Pour Windows
+        except Exception as e:
+            speak("I couldn't close the Google tabs. Please check if Chrome is running.")
+
     # ===== FIN DES NOUVELLES COMMANDES =====
